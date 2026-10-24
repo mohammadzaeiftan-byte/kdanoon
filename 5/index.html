@@ -1,0 +1,2308 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رواق | خانه فرهنگ و هنر دانشگاه تربیت دبیر شهید رجایی</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&family=Lalezar&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-paper: #F6F4F0;
+            --bg-card: #FFFFFF;
+            --bg-subtle: #EAE6DF;
+            --ink: #141413;
+            --ink-soft: #4A4843;
+            --ink-muted: #78756E;
+            --terracotta: #D94E34;
+            --persian-teal: #1B6B63;
+            --ochre: #E59A28;
+            --crimson: #B8334A;
+            --indigo: #2B4C7E;
+            --sage: #3B7A57;
+            --border-strong: 2px solid #141413;
+            --border-subtle: 1px solid #D5D0C5;
+            --shadow-hard: 5px 5px 0px #141413;
+            --shadow-hard-sm: 3px 3px 0px #141413;
+            --shadow-hard-hover: 8px 8px 0px #141413;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Vazirmatn', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        button, input, select, textarea {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-paper);
+            color: var(--ink);
+            line-height: 1.65;
+            overflow-x: hidden;
+            background-image: radial-gradient(#D5D0C5 0.85px, transparent 0.85px);
+            background-size: 24px 24px;
+        }
+
+        .font-display {
+            font-family: 'Lalezar', 'Vazirmatn', cursive;
+            letter-spacing: -0.3px;
+        }
+
+        .container {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 1. Seamless Infinite Top Ticker (Fixed Loop) */
+        .ticker-wrap {
+            background: var(--ink);
+            color: var(--bg-paper);
+            border-bottom: var(--border-strong);
+            overflow: hidden;
+            padding: 9px 0;
+            font-size: 0.85rem;
+            font-weight: 700;
+            position: relative;
+            z-index: 50;
+            display: flex;
+            direction: ltr; /* Ensures smooth continuous marquee math */
+        }
+
+        .ticker-track {
+            display: flex;
+            width: max-content;
+            animation: marqueeLoop 38s linear infinite;
+        }
+
+        .ticker-wrap:hover .ticker-track {
+            animation-play-state: paused;
+        }
+
+        .ticker-Group {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            direction: rtl;
+        }
+
+        @keyframes marqueeLoop {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(50%); }
+        }
+
+        .ticker-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--terracotta);
+            border-radius: 50%;
+            margin: 0 18px;
+            flex-shrink: 0;
+        }
+
+        /* 2. Header */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 40;
+            background: rgba(246, 244, 240, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: var(--border-strong);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 76px;
+            gap: 16px;
+        }
+
+        .brand-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--ink);
+        }
+
+        .brand-stamp {
+            width: 46px;
+            height: 46px;
+            background: var(--terracotta);
+            color: #fff;
+            border: var(--border-strong);
+            box-shadow: var(--shadow-hard-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1.45rem;
+            transform: rotate(-3deg);
+            transition: transform 0.2s ease;
+        }
+
+        .brand-box:hover .brand-stamp {
+            transform: rotate(0deg) scale(1.05);
+        }
+
+        .nav-pills {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-btn {
+            background: transparent;
+            border: 1.5px solid transparent;
+            padding: 8px 16px;
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: var(--ink);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .nav-btn:hover {
+            background: var(--bg-subtle);
+            border-color: var(--ink);
+        }
+
+        .nav-btn.active {
+            background: var(--ink);
+            color: var(--bg-paper);
+        }
+
+        .btn-brutal {
+            background: var(--bg-card);
+            color: var(--ink);
+            border: var(--border-strong);
+            box-shadow: var(--shadow-hard-sm);
+            padding: 9px 18px;
+            font-weight: 800;
+            font-size: 0.88rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.18s cubic-bezier(0.25, 1, 0.5, 1);
+            text-decoration: none;
+        }
+
+        .btn-brutal:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 5px 5px 0px var(--ink);
+        }
+
+        .btn-brutal:active {
+            transform: translate(1px, 1px);
+            box-shadow: 1px 1px 0px var(--ink);
+        }
+
+        .btn-brutal.primary {
+            background: var(--terracotta);
+            color: #fff;
+        }
+
+        .btn-brutal.teal {
+            background: var(--persian-teal);
+            color: #fff;
+        }
+
+        .btn-brutal.ink {
+            background: var(--ink);
+            color: var(--bg-paper);
+        }
+
+        /* 3. HERO SECTION */
+        .hero-editorial {
+            margin: 28px 0 44px;
+            border: var(--border-strong);
+            background: var(--bg-card);
+            box-shadow: var(--shadow-hard);
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero-right-col {
+            padding: 44px 42px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-left: var(--border-strong);
+            position: relative;
+            background: linear-gradient(135deg, #FFFFFF 0%, #FAF8F5 100%);
+        }
+
+        .hero-top-meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .meta-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            font-size: 0.82rem;
+            font-weight: 800;
+            border: 1.5px solid var(--ink);
+        }
+
+        .meta-pill.live {
+            background: var(--terracotta);
+            color: #fff;
+        }
+
+        .meta-pill.free {
+            background: var(--bg-subtle);
+            color: var(--ink);
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: #fff;
+            border-radius: 50%;
+            animation: pulseAnim 1.6s infinite;
+        }
+
+        @keyframes pulseAnim {
+            0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.8); }
+            70% { box-shadow: 0 0 0 7px rgba(255,255,255,0); }
+            100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+        }
+
+        .hero-headline {
+            font-size: clamp(2rem, 3.6vw, 3.2rem);
+            font-weight: 900;
+            line-height: 1.32;
+            color: var(--ink);
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .Sticker-badge {
+            display: inline-block;
+            background: var(--ochre);
+            color: var(--ink);
+            padding: 0px 14px;
+            border: 2px solid var(--ink);
+            box-shadow: 3px 3px 0px var(--ink);
+            transform: rotate(-1.5deg);
+            margin: 0 4px;
+        }
+
+        .dynamic-word-box {
+            display: inline-flex;
+            align-items: center;
+            background: var(--persian-teal);
+            color: #fff;
+            padding: 2px 16px;
+            border: 2px solid var(--ink);
+            box-shadow: 3px 3px 0px var(--ink);
+            margin-top: 6px;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+
+        .hero-lead {
+            font-size: 1.02rem;
+            color: var(--ink-soft);
+            max-width: 580px;
+            margin-bottom: 28px;
+            line-height: 1.85;
+            font-weight: 500;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .hero-clubs-strip {
+            padding-top: 22px;
+            border-top: 1.5px dashed #C8C2B6;
+        }
+
+        .strip-title {
+            font-size: 0.84rem;
+            font-weight: 800;
+            color: var(--ink);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .quick-club-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .quick-club-chip {
+            font-family: 'Vazirmatn', sans-serif !important;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 14px;
+            background: var(--bg-paper);
+            border: 1.5px solid var(--ink);
+            box-shadow: 2px 2px 0px var(--ink);
+            font-size: 0.84rem;
+            font-weight: 800;
+            color: var(--ink);
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .quick-club-chip:hover {
+            background: var(--ink);
+            color: #fff;
+            transform: translate(-1px, -1px);
+            box-shadow: 4px 4px 0px var(--terracotta);
+        }
+
+        .chip-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            border: 1px solid rgba(0,0,0,0.3);
+        }
+
+        /* Left Column: Vertical 3:4 Poster Stage with Auto-Slider */
+        .hero-left-stage {
+            background: var(--persian-teal);
+            background-image: 
+                radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+                linear-gradient(160deg, #165952 0%, #0F3F3A 100%);
+            background-size: 20px 20px, 100% 100%;
+            padding: 26px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            color: #fff;
+        }
+
+        .stage-topbar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 0.82rem;
+            font-weight: 700;
+        }
+
+        .stage-badge {
+            background: rgba(20, 20, 19, 0.75);
+            border: 1px solid rgba(255,255,255,0.35);
+            padding: 4px 12px;
+            color: #fff;
+        }
+
+        /* Strict Vertical 3:4 Poster Frame */
+        .vertical-poster-deck {
+            position: relative;
+            width: 100%;
+            max-width: 315px;
+            aspect-ratio: 3 / 4;
+            margin: 4px auto 14px;
+        }
+
+        .deck-back-card {
+            position: absolute;
+            inset: 0;
+            background: var(--bg-paper);
+            border: 2px solid var(--ink);
+            pointer-events: none;
+        }
+
+        .deck-back-card.card-1 {
+            transform: rotate(4deg) translate(10px, 6px);
+            background: var(--ochre);
+            z-index: 1;
+        }
+
+        .deck-back-card.card-2 {
+            transform: rotate(-3.5deg) translate(-10px, 8px);
+            background: var(--terracotta);
+            z-index: 2;
+        }
+
+        .active-vertical-poster {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            padding: 10px;
+            border: 2.5px solid var(--ink);
+            box-shadow: 8px 8px 0px var(--ink);
+            cursor: pointer;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .active-vertical-poster:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 12px 12px 0px var(--ink);
+        }
+
+        /* Auto-play progress bar inside poster top */
+        .slider-progress-track {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            left: 10px;
+            height: 4px;
+            background: rgba(255,255,255,0.2);
+            z-index: 10;
+            overflow: hidden;
+        }
+
+        .slider-progress-bar {
+            height: 100%;
+            width: 0%;
+            background: var(--ochre);
+            transition: width 0.1s linear;
+        }
+
+        /* FULL 100% POSTER CANVAS & HIGH-CONTRAST SCRIM OVERLAY */
+        .poster-canvas-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border: 1.5px solid var(--ink);
+            background-color: #141413;
+        }
+
+        .poster-custom-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        /* Full-bleed dark gradient overlay covering 100% of poster with strong bottom contrast */
+        .poster-scrim-overlay {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            background: linear-gradient(
+                180deg,
+                rgba(14, 14, 13, 0.78) 0%,
+                rgba(14, 14, 13, 0.25) 32%,
+                rgba(14, 14, 13, 0.84) 64%,
+                rgba(14, 14, 13, 0.97) 100%
+            );
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 18px 16px 16px;
+            color: #fff;
+        }
+
+        .poster-text-glass {
+            background: rgba(14, 14, 13, 0.68);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            padding: 12px 14px;
+            margin-top: auto;
+            margin-bottom: 10px;
+        }
+
+        .stage-controls {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255,255,255,0.22);
+        }
+
+        .stage-nav-btn {
+            background: var(--bg-paper);
+            color: var(--ink);
+            border: 2px solid var(--ink);
+            box-shadow: 2px 2px 0px var(--ink);
+            padding: 6px 13px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .stage-nav-btn:hover {
+            background: var(--ochre);
+        }
+
+        .stage-dots {
+            display: flex;
+            gap: 7px;
+        }
+
+        .stage-dot {
+            width: 10px;
+            height: 10px;
+            border: 1.5px solid #fff;
+            background: transparent;
+            cursor: pointer;
+            padding: 0;
+            transition: all 0.2s ease;
+        }
+
+        .stage-dot.active {
+            background: var(--ochre);
+            border-color: var(--ochre);
+            transform: scale(1.25);
+        }
+
+        /* 4. Filter Console (Expanded with All 7 Days, Day/Month Selector & Explicit Search Button) */
+        .section-head {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 16px;
+            margin-bottom: 22px;
+        }
+
+        .section-title {
+            font-size: 1.95rem;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .filter-console {
+            background: var(--bg-card);
+            border: var(--border-strong);
+            box-shadow: var(--shadow-hard);
+            padding: 20px;
+            margin-bottom: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .filter-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            padding-bottom: 14px;
+            border-bottom: var(--border-subtle);
+        }
+
+        .filter-row:last-child {
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .filter-label {
+            font-size: 0.82rem;
+            font-weight: 800;
+            color: var(--ink-muted);
+            margin-left: 6px;
+        }
+
+        .filter-chip {
+            background: var(--bg-paper);
+            color: var(--ink);
+            border: 1.5px solid var(--ink);
+            padding: 6px 13px;
+            font-size: 0.83rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .filter-chip:hover {
+            background: var(--bg-subtle);
+        }
+
+        .filter-chip.active {
+            background: var(--ink);
+            color: #fff;
+            box-shadow: 2px 2px 0px var(--terracotta);
+        }
+
+        .weekday-chip {
+            background: transparent;
+            border: 1.5px dashed var(--ink-muted);
+            padding: 5px 11px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            color: var(--ink-soft);
+            transition: all 0.15s ease;
+        }
+
+        .weekday-chip:hover {
+            border-style: solid;
+            border-color: var(--ink);
+            color: var(--ink);
+        }
+
+        .weekday-chip.active {
+            background: var(--ochre);
+            color: var(--ink);
+            border: 1.5px solid var(--ink);
+            font-weight: 900;
+        }
+
+        /* Explicit Search Form & Date Selectors */
+        .search-form-box {
+            display: flex;
+            align-items: stretch;
+            flex: 1;
+            min-width: 260px;
+            max-width: 390px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 8px 12px;
+            background: var(--bg-paper);
+            border: 1.5px solid var(--ink);
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--ink);
+            outline: none;
+        }
+
+        .search-input:focus {
+            background: #fff;
+        }
+
+        .search-submit-btn {
+            background: var(--terracotta);
+            color: #fff;
+            border: 1.5px solid var(--ink);
+            border-right: none;
+            padding: 0 16px;
+            font-weight: 800;
+            font-size: 0.84rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+            transition: background 0.15s ease;
+        }
+
+        .search-submit-btn:hover {
+            background: var(--ink);
+        }
+
+        .date-picker-group {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--bg-paper);
+            padding: 4px 8px;
+            border: 1.5px solid var(--ink);
+        }
+
+        .date-select-mini {
+            background: transparent;
+            border: none;
+            font-size: 0.82rem;
+            font-weight: 800;
+            color: var(--ink);
+            cursor: pointer;
+            padding: 3px 4px;
+            outline: none;
+        }
+
+        /* 5. Events Poster Grid (Strict 3:4 Vertical Posters with Full Overlay) */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
+            gap: 26px;
+            margin-bottom: 64px;
+        }
+
+        .event-poster-card {
+            background: var(--bg-card);
+            border: var(--border-strong);
+            box-shadow: var(--shadow-hard);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .event-poster-card:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: var(--shadow-hard-hover);
+        }
+
+        .card-poster-frame {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            border-bottom: var(--border-strong);
+            overflow: hidden;
+            cursor: pointer;
+            background: #141413;
+        }
+
+        .art-poster {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .art-poster-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        .poster-club-pill {
+            background: rgba(20, 20, 19, 0.9);
+            color: #fff;
+            padding: 4px 10px;
+            font-size: 0.74rem;
+            font-weight: 800;
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+
+        .poster-date-box {
+            background: var(--bg-paper);
+            color: var(--ink);
+            border: 1.5px solid var(--ink);
+            padding: 4px 9px;
+            text-align: center;
+            font-weight: 900;
+            font-size: 0.75rem;
+            line-height: 1.25;
+            box-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+        }
+
+        .art-poster-pre {
+            font-size: 0.78rem;
+            font-weight: 800;
+            color: var(--ochre);
+            margin-bottom: 5px;
+        }
+
+        .art-poster-title {
+            font-size: 1.32rem;
+            font-weight: 900;
+            line-height: 1.35;
+            color: #fff;
+        }
+
+        .art-poster-footer {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.76rem;
+            font-weight: 700;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .card-body-info {
+            padding: 16px 18px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            justify-content: space-between;
+            gap: 14px;
+        }
+
+        .card-meta-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: var(--ink-soft);
+            font-weight: 700;
+        }
+
+        .card-actions-row {
+            display: flex;
+            gap: 8px;
+        }
+
+        /* 6. Clubs Bento Grid */
+        .clubs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 24px;
+            margin-bottom: 64px;
+        }
+
+        .club-bento-card {
+            background: var(--bg-card);
+            border: var(--border-strong);
+            box-shadow: var(--shadow-hard);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 18px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .club-bento-card:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: var(--shadow-hard-hover);
+        }
+
+        .club-top-bar {
+            height: 6px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            border-bottom: 1.5px solid var(--ink);
+        }
+
+        .club-head-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-top: 6px;
+        }
+
+        .club-logo-frame {
+            width: 74px;
+            height: 74px;
+            background: #fff;
+            border: var(--border-strong);
+            box-shadow: var(--shadow-hard-sm);
+            padding: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .club-logo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .club-Secretary-tag {
+            display: inline-block;
+            background: var(--bg-subtle);
+            border: 1px solid var(--ink);
+            padding: 3px 10px;
+            font-size: 0.76rem;
+            font-weight: 800;
+            margin-top: 6px;
+        }
+
+        /* 7. Dedicated Club Portal View */
+        .club-portal-view {
+            display: none;
+            animation: fadeIn 0.25s ease;
+        }
+
+        .club-portal-view.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .portal-banner {
+            background: var(--bg-card);
+            border: var(--border-strong);
+            box-shadow: var(--shadow-hard);
+            padding: 32px;
+            margin: 24px 0 32px;
+            position: relative;
+        }
+
+        .council-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+            gap: 16px;
+            margin-bottom: 36px;
+        }
+
+        .council-card {
+            background: var(--bg-card);
+            border: var(--border-strong);
+            box-shadow: var(--shadow-hard-sm);
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .council-avatar {
+            width: 46px;
+            height: 46px;
+            border: 1.5px solid var(--ink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        /* Modal Lightbox */
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(20, 20, 19, 0.84);
+            backdrop-filter: blur(5px);
+            z-index: 100;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-backdrop.open {
+            display: flex;
+        }
+
+        .modal-window {
+            background: var(--bg-paper);
+            border: var(--border-strong);
+            box-shadow: 10px 10px 0px #000;
+            max-width: 860px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+        }
+
+        /* Mobile Bottom Bar */
+        .mobile-dock {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: var(--bg-card);
+            border-top: var(--border-strong);
+            z-index: 60;
+            padding: 8px 12px;
+            justify-content: space-around;
+        }
+
+        .dock-item {
+            background: none;
+            border: none;
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: var(--ink-soft);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        .dock-item.active {
+            color: var(--terracotta);
+        }
+
+        @media (max-width: 960px) {
+            .hero-editorial {
+                grid-template-columns: 1fr;
+            }
+            .hero-right-col {
+                border-left: none;
+                border-bottom: var(--border-strong);
+                padding: 28px 22px;
+            }
+            .modal-window {
+                grid-template-columns: 1fr;
+            }
+            .nav-pills {
+                display: none;
+            }
+            .mobile-dock {
+                display: flex;
+            }
+            body {
+                padding-bottom: 72px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Seamless Infinite Cultural Ticker (Two identical groups for zero-gap loop) -->
+    <div class="ticker-wrap">
+        <div class="ticker-track">
+            <div class="ticker-Group">
+                <span>فراخوان عضویت در شورای تعاملی کانون‌های فرهنگی و هنری دانشگاه تربیت دبیر شهید رجایی</span>
+                <span class="ticker-dot"></span>
+                <span>نشست «حماسه علوی؛ آشنایی با منظومه علی‌نامه» — یکشنبه ۳ آبان ساعت ۱۲:۳۰ در سالن حسن‌زاده آملی</span>
+                <span class="ticker-dot"></span>
+                <span>اکران و نقد فیلم «میان‌ستاره‌ای» — یکشنبه ۴ آبان ساعت ۱۵ در آمفی‌تئاتر مرکزی</span>
+                <span class="ticker-dot"></span>
+                <span>شرکت در تمامی کارگاه‌ها، اکران‌ها و نشست‌های کانون‌ها برای دانشجویان دانشگاه آزاد و رایگان است</span>
+                <span class="ticker-dot"></span>
+                <span>گعده کتاب‌خوانی «سمفونی مردگان» در پاتوق کتاب — دوشنبه ۵ آبان</span>
+                <span class="ticker-dot"></span>
+                <span>کمپین «دانشگاهِ حالِ خوب» توسط کانون همیاران سلامت — چهارشنبه ۷ آبان</span>
+                <span class="ticker-dot"></span>
+            </div>
+            <!-- Duplicate Group for seamless infinite loop -->
+            <div class="ticker-Group" aria-hidden="true">
+                <span>فراخوان عضویت در شورای تعاملی کانون‌های فرهنگی و هنری دانشگاه تربیت دبیر شهید رجایی</span>
+                <span class="ticker-dot"></span>
+                <span>نشست «حماسه علوی؛ آشنایی با منظومه علی‌نامه» — یکشنبه ۳ آبان ساعت ۱۲:۳۰ در سالن حسن‌زاده آملی</span>
+                <span class="ticker-dot"></span>
+                <span>اکران و نقد فیلم «میان‌ستاره‌ای» — یکشنبه ۴ آبان ساعت ۱۵ در آمفی‌تئاتر مرکزی</span>
+                <span class="ticker-dot"></span>
+                <span>شرکت در تمامی کارگاه‌ها، اکران‌ها و نشست‌های کانون‌ها برای دانشجویان دانشگاه آزاد و رایگان است</span>
+                <span class="ticker-dot"></span>
+                <span>گعده کتاب‌خوانی «سمفونی مردگان» در پاتوق کتاب — دوشنبه ۵ آبان</span>
+                <span class="ticker-dot"></span>
+                <span>کمپین «دانشگاهِ حالِ خوب» توسط کانون همیاران سلامت — چهارشنبه ۷ آبان</span>
+                <span class="ticker-dot"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Header (Renamed to Ravagh + Quick Contact Action) -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#" onclick="switchMainView('home'); return false;" class="brand-box">
+                <div class="brand-stamp font-display">ر</div>
+                <div>
+                    <div style="font-weight: 900; font-size: 1.2rem; line-height: 1.1;">رَواقِ کانون‌ها</div>
+                    <div style="font-size: 0.75rem; color: var(--ink-muted); font-weight: 700;">مجمع کانون‌های فرهنگی و هنری دانشگاه شهید رجایی</div>
+                </div>
+            </a>
+
+            <nav class="nav-pills">
+                <button class="nav-btn active" id="nav-home" onclick="switchMainView('home')">ویترین برنامه‌ها و پوسترها</button>
+                <button class="nav-btn" id="nav-clubs" onclick="scrollToSection('clubs-directory-section')">پنل کانون‌های فرهنگی</button>
+                <button class="nav-btn" onclick="openAll17Modal()">فهرست ۱۷ کانون دانشگاه</button>
+            </nav>
+
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <button class="btn-brutal primary" onclick="openQuickContactModal()">
+                    <span>📞 ارتباط سریع با کانون‌ها</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN HOME VIEW -->
+    <main id="main-home-view" class="container">
+
+        <!-- 3. HERO BANNER (Ravagh Branding + Live Jalali Date + Auto-play 3:4 Vertical Slider) -->
+        <section class="hero-editorial">
+            <!-- Right Column -->
+            <div class="hero-right-col">
+                <div>
+                    <div class="hero-top-meta">
+                        <span class="meta-pill live">
+                            <span class="pulse-dot"></span>
+                            <span id="live-today-jalali">۲ آبان ۱۴۰۵ • دانشگاه شهید رجایی</span>
+                        </span>
+                        <span class="meta-pill free">ورود به تمامی برنامه‌ها آزاد و رایگان است</span>
+                    </div>
+
+                    <h1 class="hero-headline">
+                        رَواقِ زندهٔ <span class="Sticker-badge">پوسترها</span> و نبضِ
+                        <br>
+                        <span id="hero-dynamic-phrase" class="dynamic-word-box">نشست‌ها و اکران‌های</span>
+                        دانشجویی.
+                    </h1>
+
+                    <p class="hero-lead">
+                        اینجا خبری از بوروکراسی و اطلاعیه‌های خشک اداری نیست. برنامه‌های هفتگی کانون‌ها رو بر اساس روز و تاریخ فیلتر کن، پوستر عمودی هر رویداد رو ورق بزن، یا مستقیم وارد <strong>پنل اختصاصی هر کانون</strong> بشو، اعضای شورای مرکزی رو بشناس و به تیم اجرایی بپیوند.
+                    </p>
+
+                    <div class="hero-actions">
+                        <button class="btn-brutal ink" onclick="scrollToSection('events-board-section')">
+                            <span>کاوش در دیوار پوسترها و برنامه‌ها</span>
+                            <span>↓</span>
+                        </button>
+                        <button class="btn-brutal" onclick="scrollToSection('clubs-directory-section')">
+                            <span>ورود به پنل کانون‌ها</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Club Quick Links with Proper Vazirmatn Typography -->
+                <div class="hero-clubs-strip">
+                    <div class="strip-title">
+                        <span>⚡ ورود مستقیم به پنل و شورای مرکزی کانون‌ها:</span>
+                    </div>
+                    <div class="quick-club-tags" id="hero-quick-clubs"></div>
+                </div>
+            </div>
+
+            <!-- Left Column: Auto-Playing & Manual Vertical 3:4 Poster Stage -->
+            <div class="hero-left-stage" onmouseenter="pauseHeroAutoPlay(true)" onmouseleave="pauseHeroAutoPlay(false)">
+                <div class="stage-topbar">
+                    <span class="stage-badge" id="hero-deck-counter">پوستر برگزیده ۱ از ۵</span>
+                    <span style="color: var(--ochre);" id="hero-deck-date">یکشنبه ۳ آبان • ساعت ۱۲:۳۰</span>
+                </div>
+
+                <!-- Strict 3:4 Vertical Frame -->
+                <div class="vertical-poster-deck">
+                    <div class="deck-back-card card-1"></div>
+                    <div class="deck-back-card card-2"></div>
+                    <div class="active-vertical-poster" id="hero-active-poster" onclick="openHeroActivePosterModal()">
+                        <!-- Populated dynamically by JS -->
+                    </div>
+                </div>
+
+                <div class="stage-controls">
+                    <button class="stage-nav-btn" onclick="cycleHeroPoster(-1, true)">→ پوستر قبلی</button>
+                    <div class="stage-dots" id="hero-stage-dots"></div>
+                    <button class="stage-nav-btn" onclick="cycleHeroPoster(1, true)">پوستر بعدی ←</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. EVENTS & POSTERS SECTION -->
+        <section id="events-board-section">
+            <div class="section-head">
+                <div>
+                    <div style="font-size: 0.82rem; font-weight: 800; color: var(--terracotta); margin-bottom: 4px;">● تقویم و دیوار نگاره رویدادهای دانشگاه</div>
+                    <h2 class="section-title">برنامه‌ها، کارگاه‌ها و پوسترهای کانون‌ها</h2>
+                </div>
+                <div style="font-size: 0.88rem; font-weight: 800; color: var(--ink-soft);" id="events-count-badge">
+                    در حال نمایش برنامه‌ها
+                </div>
+            </div>
+
+            <!-- Multi-dimensional Time, Date, Day & Search Filter Console -->
+            <div class="filter-console">
+                <!-- Row 1: Quick Timeframe + Explicit Day/Month Date Filter + Search Input with Button -->
+                <div class="filter-row">
+                    <div class="filter-group">
+                        <span class="filter-label">بازه زمانی:</span>
+                        <button class="filter-chip active" data-time="all" onclick="setTimeFilter('all')">همه زمان‌ها</button>
+                        <button class="filter-chip" data-time="today" onclick="setTimeFilter('today')">برنامه‌های امروز</button>
+                        <button class="filter-chip" data-time="week" onclick="setTimeFilter('week')">این هفته</button>
+                        <button class="filter-chip" data-time="month" onclick="setTimeFilter('month')">کل آبان‌ماه ۱۴۰۵</button>
+                        <button class="filter-chip" data-time="past" onclick="setTimeFilter('past')">آرشیو برگزارشده</button>
+                    </div>
+
+                    <!-- Explicit Date Filter (Day & Month) -->
+                    <div class="date-picker-group" title="جستجوی برنامه بر اساس روز و ماه مشخص">
+                        <span style="font-size: 0.78rem; font-weight: 800; color: var(--ink-muted);">📅 تاریخ دقیق:</span>
+                        <select id="filter-day-num" class="date-select-mini" onchange="renderEventsGrid()">
+                            <option value="all">همه روزها</option>
+                            <option value="۱">۱</option><option value="۲">۲</option><option value="۳">۳</option>
+                            <option value="۴">۴</option><option value="۵">۵</option><option value="۶">۶</option>
+                            <option value="۷">۷</option><option value="۸">۸</option><option value="۹">۹</option>
+                            <option value="۱۰">۱۰</option><option value="۱۱">۱۱</option><option value="۱۲">۱۲</option>
+                            <option value="۱۳">۱۳</option><option value="۱۴">۱۴</option><option value="۱۵">۱۵</option>
+                            <option value="۱۶">۱۶</option><option value="۱۷">۱۷</option><option value="۱۸">۱۸</option>
+                            <option value="۱۹">۱۹</option><option value="۲۰">۲۰</option><option value="۲۱">۲۱</option>
+                            <option value="۲۲">۲۲</option><option value="۲۳">۲۳</option><option value="۲۴">۲۴</option>
+                            <option value="۲۵">۲۵</option><option value="۲۶">۲۶</option><option value="۲۷">۲۷</option>
+                            <option value="۲۸">۲۸</option><option value="۲۹">۲۹</option><option value="۳۰">۳۰</option>
+                        </select>
+                        <span style="color: var(--ink-muted);">/</span>
+                        <select id="filter-month-name" class="date-select-mini" onchange="renderEventsGrid()">
+                            <option value="all">همه ماه‌ها</option>
+                            <option value="مهر">مهر</option>
+                            <option value="آبان">آبان</option>
+                            <option value="آذر">آذر</option>
+                            <option value="دی">دی</option>
+                        </select>
+                    </div>
+
+                    <!-- Search Box with Explicit Action Button -->
+                    <form class="search-form-box" onsubmit="event.preventDefault(); renderEventsGrid();">
+                        <input type="text" id="event-search-input" class="search-input" placeholder="جستجوی عنوان برنامه، سالن یا موضوع..." oninput="renderEventsGrid()">
+                        <button type="submit" class="search-submit-btn">
+                            <span>جستجو</span>
+                            <span>🔍</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Row 2: All 7 Days of Week (Saturday to Friday) + Club Filter -->
+                <div class="filter-row">
+                    <div class="filter-group">
+                        <span class="filter-label">ایام هفته:</span>
+                        <button class="weekday-chip active" data-day="all" onclick="setDayFilter('all')">همه روزها</button>
+                        <button class="weekday-chip" data-day="شنبه" onclick="setDayFilter('شنبه')">شنبه</button>
+                        <button class="weekday-chip" data-day="یکشنبه" onclick="setDayFilter('یکشنبه')">یکشنبه</button>
+                        <button class="weekday-chip" data-day="دوشنبه" onclick="setDayFilter('دوشنبه')">دوشنبه</button>
+                        <button class="weekday-chip" data-day="سه‌شنبه" onclick="setDayFilter('سه‌شنبه')">سه‌شنبه</button>
+                        <button class="weekday-chip" data-day="چهارشنبه" onclick="setDayFilter('چهارشنبه')">چهارشنبه</button>
+                        <button class="weekday-chip" data-day="پنجشنبه" onclick="setDayFilter('پنجشنبه')">پنجشنبه</button>
+                        <button class="weekday-chip" data-day="جمعه" onclick="setDayFilter('جمعه')">جمعه</button>
+                    </div>
+
+                    <div class="filter-group">
+                        <span class="filter-label">کانون برگزارکننده:</span>
+                        <select id="club-select-filter" class="search-input" style="min-width: 200px; cursor: pointer;" onchange="renderEventsGrid()">
+                            <option value="all">همه کانون‌های فرهنگی</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Events Vertical Poster Grid -->
+            <div class="events-grid" id="events-grid-container"></div>
+        </section>
+
+        <!-- 5. CLUBS DIRECTORY SECTION (Real Production Wording) -->
+        <section id="clubs-directory-section">
+            <div class="section-head">
+                <div>
+                    <div style="font-size: 0.82rem; font-weight: 800; color: var(--persian-teal); margin-bottom: 4px;">● معرفی، شورای مرکزی و جذب عضو</div>
+                    <h2 class="section-title">پورتال و پنل کانون‌های فرهنگی و هنری</h2>
+                </div>
+                <button class="btn-brutal" onclick="openAll17Modal()">فهرست جامع ۱۷ کانون دانشگاه ←</button>
+            </div>
+
+            <div class="clubs-grid" id="clubs-grid-container"></div>
+        </section>
+
+    </main>
+
+    <!-- 6. DEDICATED SINGLE CLUB PORTAL VIEW -->
+    <section id="club-portal-view" class="club-portal-view container">
+        <div style="margin-top: 24px;">
+            <button class="btn-brutal" onclick="switchMainView('home')">
+                <span>→ بازگشت به رواق اصلی و همه برنامه‌ها</span>
+            </button>
+        </div>
+
+        <div id="club-portal-content"></div>
+    </section>
+
+    <!-- 7. POSTER & EVENT DETAILS MODAL -->
+    <div class="modal-backdrop" id="event-modal-backdrop" onclick="if(event.target===this) closeEventModal()">
+        <div class="modal-window" id="event-modal-content"></div>
+    </div>
+
+    <!-- 8. QUICK CONTACT & COMMUNICATION MODAL -->
+    <div class="modal-backdrop" id="contact-modal-backdrop" onclick="if(event.target===this) closeQuickContactModal()">
+        <div class="modal-window" style="grid-template-columns: 1fr; max-width: 720px; padding: 32px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; border-bottom: var(--border-strong); padding-bottom: 14px;">
+                <div>
+                    <div style="font-size: 0.78rem; font-weight: 800; color: var(--terracotta);">پل ارتباطی مستقیم دانشجویان</div>
+                    <h3 style="font-size: 1.45rem; font-weight: 900;">ارتباط سریع با دبیرخانه و کانون‌های فرهنگی</h3>
+                </div>
+                <button class="btn-brutal" onclick="closeQuickContactModal()">بستن ✕</button>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin-bottom: 24px;">
+                <div style="background: #fff; border: 1.5px solid var(--ink); padding: 12px;">
+                    <div style="font-size: 0.76rem; color: var(--ink-muted); font-weight: 800;">نشانی دفاتر کانون‌ها:</div>
+                    <div style="font-size: 0.88rem; font-weight: 800; margin-top: 4px;">ساختمان معاونت فرهنگی و اجتماعی، طبقه همکف و دوم</div>
+                </div>
+                <div style="background: #fff; border: 1.5px solid var(--ink); padding: 12px;">
+                    <div style="font-size: 0.76rem; color: var(--ink-muted); font-weight: 800;">ساعات مراجعه حضوری:</div>
+                    <div style="font-size: 0.88rem; font-weight: 800; margin-top: 4px;">شنبه تا چهارشنبه — ساعت ۱۱:۳۰ الی ۱۶:۳۰</div>
+                </div>
+            </div>
+
+            <form onsubmit="handleQuickContactSubmit(event)" style="background: var(--bg-card); border: var(--border-strong); padding: 20px; display: grid; gap: 14px;">
+                <div style="font-weight: 900; font-size: 1rem;">ارسال پیام، طرح ایده یا هماهنگی مستقیم با دبیر کانون</div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+                    <input type="text" required class="search-input" placeholder="نام و نام خانوادگی شما *">
+                    <input type="text" required class="search-input" placeholder="شماره تماس یا آیدی تلگرام *">
+                </div>
+                <select class="search-input" required id="quick-contact-club-select">
+                    <option value="مجمع کل کانون‌ها">مخاطب: دبیرخانه کل کانون‌های فرهنگی</option>
+                    <option value="کانون فیلم، عکس و تئاتر">کانون فیلم، عکس و تئاتر</option>
+                    <option value="کانون گویندگی و فن بیان">کانون گویندگی و فن بیان</option>
+                    <option value="کانون پاتوق کتاب">کانون پاتوق کتاب</option>
+                    <option value="کانون همیاران سلامت">کانون همیاران سلامت</option>
+                    <option value="کانون هنرهای تجسمی">کانون هنرهای تجسمی</option>
+                    <option value="کانون شعر و ادب">کانون شعر و ادب</option>
+                </select>
+                <textarea rows="3" required class="search-input" placeholder="متن پیام، پیشنهاد برنامه یا سوال خود را بنویسید..."></textarea>
+                <button type="submit" class="btn-brutal primary" style="justify-content: center;">ارسال مستقیم پیام ←</button>
+                <div id="quick-contact-feedback" style="display: none; padding: 10px; background: #D1FAE5; border: 1.5px solid var(--ink); font-weight: 800; color: #065F46; font-size: 0.85rem;"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 9. ALL 17 CLUBS MODAL -->
+    <div class="modal-backdrop" id="all17-modal-backdrop" onclick="if(event.target===this) closeAll17Modal()">
+        <div class="modal-window" style="grid-template-columns: 1fr; max-width: 680px; padding: 32px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: var(--border-strong); padding-bottom: 14px;">
+                <h3 style="font-size: 1.4rem; font-weight: 900;">فهرست جامع ۱۷ کانون فرهنگی و هنری دانشگاه شهید رجایی</h3>
+                <button class="btn-brutal" onclick="closeAll17Modal()">بستن ✕</button>
+            </div>
+            <p style="font-size: 0.92rem; color: var(--ink-soft); margin-bottom: 18px;">
+                مجموعه کانون‌های فرهنگی، هنری و اجتماعی دانشگاه تربیت دبیر شهید رجایی در قالب ۱۷ کانون تخصصی فعالیت می‌کنند:
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(195px, 1fr)); gap: 10px; font-size: 0.85rem; font-weight: 700;">
+                <div style="padding: 10px; background: #fff; border: 1.5px solid var(--ink);">۱. کانون فیلم، عکس و تئاتر</div>
+                <div style="padding: 10px; background: #fff; border: 1.5px solid var(--ink);">۲. کانون گویندگی و فن بیان</div>
+                <div style="padding: 10px; background: #fff; border: 1.5px solid var(--ink);">۳. کانون پاتوق کتاب</div>
+                <div style="padding: 10px; background: #fff; border: 1.5px solid var(--ink);">۴. کانون همیاران سلامت</div>
+                <div style="padding: 10px; background: #fff; border: 1.5px solid var(--ink);">۵. کانون هنرهای تجسمی</div>
+                <div style="padding: 10px; background: #fff; border: 1.5px solid var(--ink);">۶. کانون شعر و ادب</div>
+                <div style="padding: 10px; background: var(--bg-subtle); border: 1px solid var(--ink);">۷. کانون موسیقی</div>
+                <div style="padding: 10px; background: var(--bg-subtle); border: 1px solid var(--ink);">۸. کانون قرآن و عترت</div>
+                <div style="padding: 10px; background: var(--bg-subtle); border: 1px solid var(--ink);">۹. کانون جهادی و محرومیت‌زدایی</div>
+                <div style="padding: 10px; background: var(--bg-subtle); border: 1px solid var(--ink);">۱۰. کانون محیط زیست و گردشگری</div>
+                <div style="padding: 10px; background: var(--bg-subtle); border: 1px solid var(--ink);">۱۱. کانون هلال احمر</div>
+                <div style="padding: 10px; background: var(--bg-subtle); border: 1px solid var(--ink);">۱۲. کانون مهدویت و انتظار</div>
+                <div style="padding: 10px; background: var(--bg-subtle); border: 1px solid var(--ink);">۱۳. کانون نشریات دانشجویی</div>
+                <div style="padding: 10px; background: var(--bg-subtle); border: 1px solid var(--ink);">۱۴. کانون صنایع دستی</div>
+                <div style="padding: 10px; background: var(--bg-subtle); border: 1px solid var(--ink);">۱۵. کانون بازی‌های فکری و بردگیم</div>
+                <div style="padding: 10px; background: var(--bg-subtle); border: 1px solid var(--ink);">۱۶. کانون رسانه و فضای مجازی</div>
+                <div style="padding: 10px; background: var(--bg-subtle); border: 1px solid var(--ink);">۱۷. کانون گفتمان و مناظره</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation Dock -->
+    <div class="mobile-dock">
+        <button class="dock-item active" onclick="switchMainView('home')">
+            <span>📅</span>
+            <span>برنامه‌ها</span>
+        </button>
+        <button class="dock-item" onclick="scrollToSection('clubs-directory-section')">
+            <span>🏛️</span>
+            <span>کانون‌ها</span>
+        </button>
+        <button class="dock-item" onclick="openQuickContactModal()">
+            <span>📞</span>
+            <span>ارتباط سریع</span>
+        </button>
+        <button class="dock-item" onclick="openAll17Modal()">
+            <span>✨</span>
+            <span>۱۷ کانون</span>
+        </button>
+    </div>
+
+    <footer style="border-top: var(--border-strong); background: var(--ink); color: var(--bg-paper); padding: 40px 0; margin-top: 80px;">
+        <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px;">
+            <div>
+                <div style="font-weight: 900; font-size: 1.15rem;">رَواق | پورتال جامع کانون‌های فرهنگی و هنری دانشگاه تربیت دبیر شهید رجایی</div>
+                <div style="font-size: 0.82rem; color: #B0ACA2; margin-top: 4px;">تهران، لویزان، خیابان شعبانلو — معاونت فرهنگی و اجتماعی دانشگاه شهید رجایی</div>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: center;">
+                <button class="btn-brutal" style="padding: 6px 14px; font-size: 0.8rem;" onclick="openQuickContactModal()">ارتباط با دبیرخانه</button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 1. CLUBS DATA
+        const clubsData = [
+            {
+                id: 'cinema',
+                name: 'کانون فیلم، عکس و تئاتر',
+                shortName: 'فیلم و تئاتر',
+                logo: 'InShot_20260825_081444958.png',
+                color: '#D94E34',
+                tagline: 'روایت تصویر، صحنه و لنزهای بیدار در دانشگاه شهید رجایی',
+                description: 'برگزارکننده سلسله نشست‌های اکران و نقد فیلم (سکانس نقد)، کارگاه‌های عکاسی مستند و پرتره، و تمرینات مستمر گروه تئاتر دانشجویی.',
+                secretary: 'کیان نعمت‌زاده',
+                office: 'ساختمان معاونت فرهنگی، طبقه دوم، پلاتو نمایش',
+                council: [
+                    { name: 'کیان نعمت‌زاده', role: 'دبیر کانون' },
+                    { name: 'سارا احمدی', role: 'مسئول کمیته تئاتر و صحنه' },
+                    { name: 'امیرحسین رضایی', role: 'مسئول کمیته عکاسی و گالری' },
+                    { name: 'نگار موسوی', role: 'مسئول اکران و سکانس نقد' },
+                    { name: 'پارسا کریمی', role: 'مسئول فنی و تدوین' }
+                ],
+                teams: ['بازیگری و کارگردانی تئاتر', 'عکاسی خبری و هنری', 'تدوین و تصویربرداری', 'نقد و تحلیل سینما']
+            },
+            {
+                id: 'radio',
+                name: 'کانون گویندگی و فن بیان',
+                shortName: 'گویندگی و فن بیان',
+                logo: 'photo_2025-11-08_22-51-50 (2).png',
+                color: '#1B6B63',
+                tagline: 'صدای گرم دانشگاه؛ از استودیو رادیو رجایی تا صحنه‌های اجرا',
+                description: 'تولیدکننده پادکست‌های رادیو دانشجو، پرورش مجریان صحنه برای رویدادهای بزرگ دانشگاه و برگزاری کارگاه‌های تخصصی فن بیان و دوبله.',
+                secretary: 'عباس مرادی',
+                office: 'ساختمان فرهنگی، استودیو ضبط رادیو رجایی',
+                council: [
+                    { name: 'عباس مرادی', role: 'دبیر کانون' },
+                    { name: 'فاطمه زارع', role: 'سردبیر رادیو و پادکست' },
+                    { name: 'محمد صادقی', role: 'مسئول کمیته مجریان صحنه' },
+                    { name: 'زهرا حسینی', role: 'مسئول کارگاه‌های دوبله و نریشن' }
+                ],
+                teams: ['گویندگی پادکست و نریشن', 'اجرای استیج و مراسم‌ها', 'نویسندگی متن رادیویی', 'مهندسی صدا و میکس']
+            },
+            {
+                id: 'book',
+                name: 'کانون پاتوق کتاب',
+                shortName: 'پاتوق کتاب',
+                logo: 'لوگو پاتوق کتاب (5).png',
+                color: '#E59A28',
+                tagline: 'گعده‌های صمیمی کتاب‌خوانی، نقد ادبیات و تبادل اندیشه',
+                description: 'محفلی برای خوانش دسته‌جمعی رمان‌های برجسته ایران و جهان، مناظره فکری پیرامون متون فلسفی و تاریخی و ایستگاه امانت آزاد کتاب.',
+                secretary: 'محمد صالحی',
+                office: 'ضلع غربی کتابخانه مرکزی، کافه پاتوق کتاب',
+                council: [
+                    { name: 'محمد صالحی', role: 'دبیر کانون' },
+                    { name: 'مریم کاظمی', role: 'مدیر حلقه‌های مطالعاتی رمان' },
+                    { name: 'علی‌اکبر جعفری', role: 'مسئول کمیته نقد و مناظره کتاب' },
+                    { name: 'ریحانه طاهری', role: 'مسئول امانت و تبادل کتاب' }
+                ],
+                teams: ['تسهیل‌گری حلقه‌های کتاب‌خوانی', 'یادداشت‌نویسی و نقد کتاب', 'تولید محتوای معرفی کتاب', 'اجرایی نمایشگاه کتاب']
+            },
+            {
+                id: 'health',
+                name: 'کانون همیاران سلامت',
+                shortName: 'همیاران سلامت',
+                logo: 'همیاران متندار.png',
+                color: '#3B7A57',
+                tagline: 'ارتقای سلامت روان، نشاط دانشجویی و مهارت‌های زندگی',
+                description: 'برگزاری کارگاه‌های تخصصی روانشناسی با حضور اساتید برجسته، کمپین‌های سلامت محور در سطح خوابگاه و دانشکده‌ها و مشاوره همتا.',
+                secretary: 'محمدعلی ضعیف‌تن',
+                office: 'مرکز مشاوره و سلامت دانشگاه، اتاق همیاران',
+                council: [
+                    { name: 'محمدعلی ضعیف‌تن', role: 'دبیر و عضو شورای مرکزی' },
+                    { name: 'دکتر نیلوفر راد', role: 'رابط کارگاه‌های تخصصی روانشناسی' },
+                    { name: 'سینا محمدی', role: 'مسئول کمپین‌های میدانی سلامت' },
+                    { name: 'الهام شریفی', role: 'مسئول رسانه و طراحی گرافیک' },
+                    { name: 'مهدی عباسی', role: 'رابط خوابگاه‌ها و دانشجویان نوورود' }
+                ],
+                teams: ['برنامه‌ریزی کمپین‌های سلامت و نشاط', 'هماهنگی کارگاه‌های روانشناسی', 'طراحی گرافیک و رسانه سلامت', 'همیار سلامت خوابگاه‌ها']
+            },
+            {
+                id: 'visual',
+                name: 'کانون هنرهای تجسمی',
+                shortName: 'هنرهای تجسمی',
+                logo: 'IMG_6394.PNG',
+                color: '#B8334A',
+                tagline: 'رنگ، فرم، خوشنویسی، طراحی گرافیک و تصویرسازی',
+                description: 'فضایی برای تجربه کارگاهی نقاشی، طراحی پوستر، تایپوگرافی، خوشنویسی و برپایی گالری‌های فصلی از آثار دانشجویان هنرمند در سطح دانشگاه.',
+                secretary: 'مهسا فرهادی',
+                office: 'طبقه همکف معاونت فرهنگی، کارگاه هنرهای تجسمی',
+                council: [
+                    { name: 'مهسا فرهادی', role: 'دبیر کانون' },
+                    { name: 'سهیل رحیمی', role: 'مسئول کارگاه گرافیک و پوستر' },
+                    { name: 'آیدا کمالی', role: 'مسئول کمیته نقاشی و طراحی' },
+                    { name: 'حسین نوری', role: 'مسئول کمیته خوشنویسی و تایپوگرافی' }
+                ],
+                teams: ['طراحی پوستر و گرافیک رویداد', 'نقاشی، سیاه‌قلم و آبرنگ', 'خوشنویسی و تایپوگرافی ایرانی', 'صفحه‌آرایی و تصویرسازی']
+            },
+            {
+                id: 'poetry',
+                name: 'کانون شعر و ادب',
+                shortName: 'شعر و ادب',
+                logo: 'IMG_9314.PNG',
+                color: '#2B4C7E',
+                tagline: 'خلوت انس با غزل، مثنوی، منظومه‌های حماسی و نشریه ادبی',
+                description: 'برگزارکننده شب‌های شعر، نشست‌های شاهنامه‌خوانی و منظومه‌خوانی، کارگاه‌های نقد ادبی و انتشار نشریه تخصصی ادبی و هنری دانشجویان.',
+                secretary: 'عرفان علوی',
+                office: 'ساختمان فرهنگی، اتاق ادب و نشریات',
+                council: [
+                    { name: 'عرفان علوی', role: 'دبیر کانون' },
+                    { name: 'محمدعلی ضعیف‌تن', role: 'مدیر هنری، صفحه‌آرایی و گرافیک نشریه' },
+                    { name: 'غزل بهرامی', role: 'مسئول شب‌های شعر و مشاعره' },
+                    { name: 'پویا رستمی', role: 'سردبیر گاهنامه ادبی کانون' }
+                ],
+                teams: ['شعرخوانی و نقد ادبی (کلاسیک و نو)', 'تحریریه نشریه ادبی', 'صفحه‌آرایی، تایپوگرافی و گرافیک مطبوعاتی', 'داستان‌نویسی کوتاه']
+            }
+        ];
+
+        // 2. REALISTIC EVENTS DATA (Including Sunday 3 Aban Hamaseh Alavi & Thursday/Friday programs)
+        const eventsData = [
+            {
+                id: 'ev0',
+                clubId: 'poetry',
+                title: 'حماسه علوی؛ آشنایی با منظومه علی‌نامه و نقالی',
+                subtitle: 'سخنرانی دکتر فضل‌بنیات و نقالی مرشد ابوالفضل ورمزیار',
+                dayName: 'یکشنبه',
+                dayNum: '۳',
+                monthName: 'آبان',
+                dateText: '۳ آبان ۱۴۰۵',
+                timeText: 'ساعت ۱۲:۳۰ تا ۱۳:۳۰',
+                location: 'سالن حسن‌زاده آملی (بالای معاونت فرهنگی)',
+                timeframe: 'week',
+                isFeaturedInHero: true,
+                posterGradient: 'linear-gradient(155deg, #102542 0%, #1D3557 50%, #B8860B 100%)',
+                posterTag: 'POETRY_SRTTU#',
+                customPosterUrl: null,
+                details: 'نشست تخصصی آشنایی با منظومه کهن «علی‌نامه» با سخنرانی استاد ارجمند دکتر فضل‌بنیات و اجرای زنده نقالی حماسی توسط مرشد ابوالفضل ورمزیار، به همراه اهدای جوایز و پذیرایی.'
+            },
+            {
+                id: 'ev1',
+                clubId: 'cinema',
+                title: 'اکران و کالبدشکافی سینمای نولان: میان‌ستاره‌ای',
+                subtitle: 'سلسله نشست‌های سکانسِ نقد (۴)',
+                dayName: 'یکشنبه',
+                dayNum: '۴',
+                monthName: 'آبان',
+                dateText: '۴ آبان ۱۴۰۵',
+                timeText: 'ساعت ۱۵:۰۰ تا ۱۸:۰۰',
+                location: 'آمفی‌تئاتر مرکزی دانشگاه',
+                timeframe: 'today',
+                isFeaturedInHero: true,
+                posterGradient: 'linear-gradient(155deg, #141413 0%, #2C1814 55%, #D94E34 100%)',
+                posterTag: 'SRTTU_CINEMA#',
+                customPosterUrl: null,
+                details: 'پخش نسخه باکیفیت فیلم Interstellar روی پرده عریض آمفی‌تئاتر مرکزی همراه با نشست نقد و بررسی ابعاد فیزیک اخترشناسی و ساختار درام اثر با حضور منتقد مهمان.'
+            },
+            {
+                id: 'ev2',
+                clubId: 'health',
+                title: 'کارگاه تعاملی مدیریت استرس و تاب‌آوری تحصیلی',
+                subtitle: 'سلسله کارگاه‌های «حالِ خوبِ ما»',
+                dayName: 'چهارشنبه',
+                dayNum: '۷',
+                monthName: 'آبان',
+                dateText: '۷ آبان ۱۴۰۵',
+                timeText: 'ساعت ۱۳:۳۰ تا ۱۵:۳۰',
+                location: 'تالار شهید طهرانی‌مقدم',
+                timeframe: 'week',
+                isFeaturedInHero: true,
+                posterGradient: 'linear-gradient(155deg, #0E2E2B 0%, #1B6B63 60%, #E59A28 100%)',
+                posterTag: 'HEALTH_SRTTU#',
+                customPosterUrl: null,
+                details: 'کارگاه عملی و گفتگومحور با حضور روانشناس و درمانگر مهمان پیرامون مهارت‌های کنترل اضطراب، تعادل بین درس و کار و ارتباطات مؤثر دانشجویی.'
+            },
+            {
+                id: 'ev3',
+                clubId: 'book',
+                title: 'گعده نقد و خوانش رمان «سمفونی مردگان» عباس معروفی',
+                subtitle: 'حلقه ادبیات داستانی معاصر',
+                dayName: 'دوشنبه',
+                dayNum: '۵',
+                monthName: 'آبان',
+                dateText: '۵ آبان ۱۴۰۵',
+                timeText: 'ساعت ۱۵:۰۰ تا ۱۶:۴۵',
+                location: 'پاتوق کتاب (ضلع غربی کتابخانه)',
+                timeframe: 'today',
+                isFeaturedInHero: true,
+                posterGradient: 'linear-gradient(155deg, #2A2112 0%, #8C5811 55%, #E59A28 100%)',
+                posterTag: 'BOOK_CLUB#',
+                customPosterUrl: null,
+                details: 'بررسی تکنیک جریان سیال ذهن و زاویه دیدهای متقاطع در شاهکار عباس معروفی. شرکت برای تمامی علاقه‌مندان حتی اگر کتاب را کامل نخوانده‌اند آزاد است.'
+            },
+            {
+                id: 'ev4',
+                clubId: 'visual',
+                title: 'تور عکاسی و اسکیس گروهی در بافت تاریخی تهران',
+                subtitle: 'اردوی یک‌روزه آخر هفته کانون هنرهای تجسمی و عکاسی',
+                dayName: 'پنجشنبه',
+                dayNum: '۸',
+                monthName: 'آبان',
+                dateText: '۸ آبان ۱۴۰۵',
+                timeText: 'ساعت ۰۸:۳۰ تا ۱۳:۳۰',
+                location: 'حرکت از سردر اصلی دانشگاه به سمت عمارت مسعودیه',
+                timeframe: 'week',
+                isFeaturedInHero: true,
+                posterGradient: 'linear-gradient(155deg, #2E1118 0%, #B8334A 65%, #D94E34 100%)',
+                posterTag: 'PHOTO_WALK#',
+                customPosterUrl: null,
+                details: 'برنامه عملی عکاسی معماری و اسکیس حضوری از بناهای تاریخی تهران همراه با نقد آثار ثبت‌شده در پایان برنامه.'
+            },
+            {
+                id: 'ev5',
+                clubId: 'radio',
+                title: 'کارگاه عملی تربیت مجری استیج و صداسازی رادیویی',
+                subtitle: 'فصل جدید استعدادیابی رادیو رجایی',
+                dayName: 'شنبه',
+                dayNum: '۱۰',
+                monthName: 'آبان',
+                dateText: '۱۰ آبان ۱۴۰۵',
+                timeText: 'ساعت ۱۴:۰۰ تا ۱۶:۰۰',
+                location: 'پلاتو فرهنگی و استودیو رادیو',
+                timeframe: 'month',
+                isFeaturedInHero: false,
+                posterGradient: 'linear-gradient(155deg, #102A28 0%, #1B6B63 70%, #3B7A57 100%)',
+                posterTag: 'RADIO_STAGE#',
+                customPosterUrl: null,
+                details: 'آموزش تنفس دیافراگمی، کنترل لرزش صدا روی سن، بداهه‌گویی در مراسم‌های رسمی و تست صدای زنده در استودیو برای علاقه‌مندان به گویندگی.'
+            },
+            {
+                id: 'ev6',
+                clubId: 'cinema',
+                title: 'پاتوق تئاتر و تمرین خوانش نمایشنامه در خوابگاه',
+                subtitle: 'ویژه دانشجویان ساکن خوابگاه در پایان هفته',
+                dayName: 'جمعه',
+                dayNum: '۹',
+                monthName: 'آبان',
+                dateText: '۹ آبان ۱۴۰۵',
+                timeText: 'ساعت ۱۸:۰۰ تا ۲۰:۰۰',
+                location: 'سالن فرهنگی خوابگاه شهید رجایی',
+                timeframe: 'week',
+                isFeaturedInHero: false,
+                posterGradient: 'linear-gradient(155deg, #1F1924 0%, #5B2C6F 65%, #D94E34 100%)',
+                posterTag: 'THEATER_FRIDAY#',
+                customPosterUrl: null,
+                details: 'دورهمی صمیمی عصر جمعه برای تمرین بداهه‌پردازی، نمایشنامه‌خوانی و تحلیل بازیگری.'
+            },
+            {
+                id: 'ev7',
+                clubId: 'book',
+                title: 'نشست صمیمی بررسی «پیرمرد و دریا» ارنست همینگوی',
+                subtitle: 'آرشیو جلسات مهرماه ۱۴۰۵',
+                dayName: 'چهارشنبه',
+                dayNum: '۲۸',
+                monthName: 'مهر',
+                dateText: '۲۸ مهر ۱۴۰۵',
+                timeText: 'برگزار شده',
+                location: 'پاتوق کتاب',
+                timeframe: 'past',
+                isFeaturedInHero: false,
+                posterGradient: 'linear-gradient(155deg, #232322 0%, #4A4843 100%)',
+                posterTag: 'ARCHIVE_BOOK#',
+                customPosterUrl: null,
+                details: 'این نشست در هفته پایانی مهرماه با حضور جمعی از دانشجویان برگزار شد و فایل صوتی خلاصه مباحث در کانال کانون پاتوق کتاب قرار گرفت.'
+            }
+        ];
+
+        // State Variables
+        let activeTimeFilter = 'all';
+        let activeDayFilter = 'all';
+        let heroDeckIndex = 0;
+        let heroAutoTimer = null;
+        let heroProgressPercent = 0;
+        let isHeroPaused = false;
+
+        const heroPhrases = [
+            'نشست‌ها و اکران‌های',
+            'شب‌های شعر و ادبِ',
+            'گعده‌های کتاب‌خوانیِ',
+            'کارگاه‌های حالِ خوبِ',
+            'گالری‌ها و اجراهای'
+        ];
+        let phraseIdx = 0;
+
+        function getClubById(id) {
+            return clubsData.find(c => c.id === id) || clubsData[0];
+        }
+
+        function getHeroFeaturedEvents() {
+            return eventsData.filter(e => e.isFeaturedInHero);
+        }
+
+        // Initialize Page
+        window.addEventListener('DOMContentLoaded', () => {
+            updateLiveJalaliHeaderDate();
+            populateHeroQuickClubs();
+            populateClubFilterSelect();
+            renderHeroPosterDeck();
+            startHeroAutoSlider();
+            renderEventsGrid();
+            renderClubsBentoGrid();
+            startHeroWordRotator();
+        });
+
+        // Live Jalali Date Calculation for Header Badge
+        function updateLiveJalaliHeaderDate() {
+            const badge = document.getElementById('live-today-jalali');
+            try {
+                const now = new Date();
+                const weekday = new Intl.DateTimeFormat('fa-IR', { weekday: 'long' }).format(now);
+                const day = new Intl.DateTimeFormat('fa-IR', { day: 'numeric' }).format(now);
+                const month = new Intl.DateTimeFormat('fa-IR', { month: 'long' }).format(now);
+                badge.textContent = `${weekday} ${day} ${month} ۱۴۰۵ • دانشگاه شهید رجایی`;
+            } catch (e) {
+                badge.textContent = '۲ آبان ۱۴۰۵ • دانشگاه شهید رجایی';
+            }
+        }
+
+        // Dynamic Word Rotator in Hero Banner
+        function startHeroWordRotator() {
+            const el = document.getElementById('hero-dynamic-phrase');
+            setInterval(() => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(6px)';
+                setTimeout(() => {
+                    phraseIdx = (phraseIdx + 1) % heroPhrases.length;
+                    el.textContent = heroPhrases[phraseIdx];
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, 240);
+            }, 3200);
+        }
+
+        // Populate Interactive Club Chips in Hero with Clean Vazirmatn Font
+        function populateHeroQuickClubs() {
+            const wrap = document.getElementById('hero-quick-clubs');
+            wrap.innerHTML = clubsData.map(club => `
+                <button type="button" class="quick-club-chip" onclick="openClubPortal('${club.id}')">
+                    <span class="chip-dot" style="background: ${club.color};"></span>
+                    <span>${club.name}</span>
+                </button>
+            `).join('');
+        }
+
+        function populateClubFilterSelect() {
+            const select = document.getElementById('club-select-filter');
+            select.innerHTML = `<option value="all">همه کانون‌های فرهنگی</option>` +
+                clubsData.map(c => `<option value="${c.id}">${c.name}</option>`).join('');
+        }
+
+        // Render Strict 3:4 Vertical Poster in Hero Left Stage with 100% Full-Bleed High-Opacity Overlay
+        function renderHeroPosterDeck() {
+            const featured = getHeroFeaturedEvents();
+            const ev = featured[heroDeckIndex % featured.length];
+            const club = getClubById(ev.clubId);
+
+            document.getElementById('hero-deck-counter').textContent = `پوستر برگزیده ${heroDeckIndex + 1} از ${featured.length}`;
+            document.getElementById('hero-deck-date').textContent = `${ev.dayName} ${ev.dateText.replace(' ۱۴۰۵', '')} • ${ev.timeText.replace('ساعت ', '')}`;
+
+            const activeCard = document.getElementById('hero-active-poster');
+            activeCard.innerHTML = `
+                <div class="slider-progress-track">
+                    <div class="slider-progress-bar" id="hero-slider-bar" style="width: ${heroProgressPercent}%;"></div>
+                </div>
+                <div class="poster-canvas-inner" style="background: ${ev.posterGradient};">
+                    ${ev.customPosterUrl ? `<img src="${ev.customPosterUrl}" class="poster-custom-img" alt="${ev.title}">` : ''}
+                    <!-- Full 100% Scrim Overlay so text is always 100% legible over any uploaded poster -->
+                    <div class="poster-scrim-overlay">
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 4px;">
+                            <span style="background: ${club.color}; color: #fff; padding: 4px 11px; font-size: 0.74rem; font-weight: 800; border: 1.5px solid #fff; box-shadow: 2px 2px 0px rgba(0,0,0,0.6);">
+                                ${club.name}
+                            </span>
+                            <span style="background: rgba(0,0,0,0.65); padding: 3px 8px; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.5px; border: 1px solid rgba(255,255,255,0.25);">
+                                ${ev.posterTag}
+                            </span>
+                        </div>
+
+                        <div class="poster-text-glass">
+                            <div style="width: 42px; height: 4px; background: var(--ochre); margin-bottom: 8px;"></div>
+                            <div style="font-size: 0.78rem; color: var(--ochre); font-weight: 800; margin-bottom: 5px;">
+                                ${ev.subtitle}
+                            </div>
+                            <h3 style="font-size: 1.28rem; font-weight: 900; line-height: 1.38; color: #fff;">
+                                ${ev.title}
+                            </h3>
+                        </div>
+
+                        <div style="border-top: 1px solid rgba(255,255,255,0.35); padding-top: 10px; display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; font-weight: 800;">
+                            <span>📍 ${ev.location}</span>
+                            <span style="color: var(--ochre); white-space: nowrap; margin-right: 8px;">بزرگنمایی ⤢</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            const dotsWrap = document.getElementById('hero-stage-dots');
+            dotsWrap.innerHTML = featured.map((_, idx) => `
+                <button type="button" class="stage-dot ${idx === heroDeckIndex ? 'active' : ''}" onclick="setHeroPosterIndex(${idx})" aria-label="اسلاید ${idx + 1}"></button>
+            `).join('');
+        }
+
+        // Auto-Play Slider Engine + Manual Controls
+        function startHeroAutoSlider() {
+            if (heroAutoTimer) clearInterval(heroAutoTimer);
+            heroAutoTimer = setInterval(() => {
+                if (isHeroPaused) return;
+                heroProgressPercent += 2;
+                const bar = document.getElementById('hero-slider-bar');
+                if (bar) bar.style.width = heroProgressPercent + '%';
+
+                if (heroProgressPercent >= 100) {
+                    heroProgressPercent = 0;
+                    cycleHeroPoster(1, false);
+                }
+            }, 100); // 100ms * 50 steps = 5.0 seconds per slide
+        }
+
+        function pauseHeroAutoPlay(state) {
+            isHeroPaused = state;
+        }
+
+        function cycleHeroPoster(dir, isManual = false) {
+            const featured = getHeroFeaturedEvents();
+            heroDeckIndex = (heroDeckIndex + dir + featured.length) % featured.length;
+            if (isManual) heroProgressPercent = 0;
+            renderHeroPosterDeck();
+        }
+
+        function setHeroPosterIndex(idx) {
+            heroDeckIndex = idx;
+            heroProgressPercent = 0;
+            renderHeroPosterDeck();
+        }
+
+        function openHeroActivePosterModal() {
+            const featured = getHeroFeaturedEvents();
+            const ev = featured[heroDeckIndex % featured.length];
+            openEventModal(ev.id);
+        }
+
+        // Filter Handlers
+        function setTimeFilter(timeVal) {
+            activeTimeFilter = timeVal;
+            document.querySelectorAll('[data-time]').forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('data-time') === timeVal);
+            });
+            renderEventsGrid();
+        }
+
+        function setDayFilter(dayVal) {
+            activeDayFilter = dayVal;
+            document.querySelectorAll('[data-day]').forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('data-day') === dayVal);
+            });
+            renderEventsGrid();
+        }
+
+        function resetAllFilters() {
+            activeTimeFilter = 'all';
+            activeDayFilter = 'all';
+            document.getElementById('club-select-filter').value = 'all';
+            document.getElementById('filter-day-num').value = 'all';
+            document.getElementById('filter-month-name').value = 'all';
+            document.getElementById('event-search-input').value = '';
+            setTimeFilter('all');
+            setDayFilter('all');
+        }
+
+        // Render Main Events Grid (Full 100% Scrim Overlay + Day/Month Filter)
+        function renderEventsGrid() {
+            const container = document.getElementById('events-grid-container');
+            const clubVal = document.getElementById('club-select-filter').value;
+            const dayNumVal = document.getElementById('filter-day-num').value;
+            const monthNameVal = document.getElementById('filter-month-name').value;
+            const query = document.getElementById('event-search-input').value.trim().toLowerCase();
+
+            const filtered = eventsData.filter(ev => {
+                if (activeTimeFilter !== 'all') {
+                    if (activeTimeFilter === 'week' && !(ev.timeframe === 'today' || ev.timeframe === 'week')) return false;
+                    else if (activeTimeFilter === 'month' && ev.timeframe === 'past') return false;
+                    else if (activeTimeFilter !== 'week' && activeTimeFilter !== 'month' && ev.timeframe !== activeTimeFilter) return false;
+                }
+                if (activeDayFilter !== 'all' && ev.dayName !== activeDayFilter) return false;
+                if (dayNumVal !== 'all' && ev.dayNum !== dayNumVal) return false;
+                if (monthNameVal !== 'all' && ev.monthName !== monthNameVal) return false;
+                if (clubVal !== 'all' && ev.clubId !== clubVal) return false;
+                if (query) {
+                    const hay = `${ev.title} ${ev.subtitle} ${ev.location} ${ev.dayName} ${ev.dateText}`.toLowerCase();
+                    if (!hay.includes(query)) return false;
+                }
+                return true;
+            });
+
+            document.getElementById('events-count-badge').textContent = `نمایش ${filtered.length} برنامه`;
+
+            if (filtered.length === 0) {
+                container.innerHTML = `
+                    <div style="grid-column: 1 / -1; background: var(--bg-card); border: var(--border-strong); padding: 48px 24px; text-align: center;">
+                        <div style="font-size: 1.2rem; font-weight: 900; margin-bottom: 8px;">برنامه‌ای با این مشخصات یافت نشد</div>
+                        <p style="color: var(--ink-soft); margin-bottom: 16px;">می‌توانید فیلترهای روز، تاریخ یا جستجو را بازنشانی کنید.</p>
+                        <button class="btn-brutal primary" onclick="resetAllFilters()">
+                            نمایش همه برنامه‌ها
+                        </button>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = filtered.map(ev => {
+                const club = getClubById(ev.clubId);
+                return `
+                    <article class="event-poster-card">
+                        <div class="card-poster-frame" onclick="openEventModal('${ev.id}')">
+                            <div class="art-poster" style="background: ${ev.posterGradient};">
+                                ${ev.customPosterUrl ? `<img src="${ev.customPosterUrl}" class="poster-custom-img" alt="${ev.title}">` : ''}
+                                <div class="poster-scrim-overlay">
+                                    <div class="art-poster-header">
+                                        <span class="poster-club-pill" style="background: ${club.color};">${club.name}</span>
+                                        <div class="poster-date-box">
+                                            <div>${ev.dayName}</div>
+                                            <div>${ev.dateText.replace(' ۱۴۰۵', '')}</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="poster-text-glass">
+                                        <div class="art-poster-pre">${ev.subtitle}</div>
+                                        <h3 class="art-poster-title">${ev.title}</h3>
+                                    </div>
+
+                                    <div class="art-poster-footer">
+                                        <span>📍 ${ev.location}</span>
+                                        <span style="color: var(--ochre);">مشاهده پوستر ⤢</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body-info">
+                            <div class="card-meta-line">
+                                <span>🕒 ${ev.timeText}</span>
+                                <span style="color: var(--persian-teal); font-weight: 900;">ورود آزاد و رایگان</span>
+                            </div>
+
+                            <div class="card-actions-row">
+                                <button class="btn-brutal ink" style="flex: 1; justify-content: center;" onclick="openEventModal('${ev.id}')">
+                                    بزرگنمایی پوستر و جزئیات
+                                </button>
+                                <button class="btn-brutal" onclick="openClubPortal('${club.id}')" title="ورود به پنل کانون">
+                                    پنل کانون
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                `;
+            }).join('');
+        }
+
+        // Render Clubs Directory
+        function renderClubsBentoGrid() {
+            const container = document.getElementById('clubs-grid-container');
+            container.innerHTML = clubsData.map(club => {
+                const clubEventsCount = eventsData.filter(e => e.clubId === club.id).length;
+                return `
+                    <div class="club-bento-card" onclick="openClubPortal('${club.id}')">
+                        <div class="club-top-bar" style="background: ${club.color};"></div>
+                        <div>
+                            <div class="club-head-row">
+                                <div class="club-logo-frame">
+                                    <img src="${club.logo}" alt="${club.name}" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\\'font-weight:900;font-size:1.3rem;color:${club.color}\\'>${club.shortName[0]}</span>';">
+                                </div>
+                                <div>
+                                    <h3 style="font-size: 1.28rem; font-weight: 900;">${club.name}</h3>
+                                    <span class="club-Secretary-tag">دبیر کانون: ${club.secretary}</span>
+                                </div>
+                            </div>
+
+                            <p style="margin-top: 14px; font-size: 0.9rem; color: var(--ink-soft);">
+                                ${club.description}
+                            </p>
+                        </div>
+
+                        <div style="padding-top: 14px; border-top: var(--border-subtle); display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-size: 0.8rem; font-weight: 800; color: var(--ink-muted);">
+                                شورای مرکزی (${club.council.length} نفر) • ${clubEventsCount} برنامه ثبت‌شده
+                            </span>
+                            <span style="font-weight: 900; font-size: 0.86rem; color: ${club.color};">
+                                ورود به پنل کانون ←
+                            </span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Open Dedicated Single Club Portal View
+        function openClubPortal(clubId) {
+            const club = getClubById(clubId);
+            const clubEvents = eventsData.filter(e => e.clubId === club.id);
+
+            document.getElementById('main-home-view').style.display = 'none';
+            const portalView = document.getElementById('club-portal-view');
+            portalView.classList.add('active');
+
+            const content = document.getElementById('club-portal-content');
+            content.innerHTML = `
+                <div class="portal-banner" style="border-top: 8px solid ${club.color};">
+                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px;">
+                        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+                            <div class="club-logo-frame" style="width: 96px; height: 96px;">
+                                <img src="${club.logo}" alt="${club.name}" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\\'font-weight:900;font-size:2rem;color:${club.color}\\'>${club.shortName[0]}</span>';">
+                            </div>
+                            <div>
+                                <div style="display: inline-block; background: ${club.color}; color: #fff; padding: 3px 12px; font-size: 0.76rem; font-weight: 800; margin-bottom: 6px;">
+                                    پورتال و پنل رسمی کانون
+                                </div>
+                                <h1 style="font-size: 2.1rem; font-weight: 900;">${club.name}</h1>
+                                <p style="font-size: 0.98rem; color: var(--ink-soft); margin-top: 4px;">${club.tagline}</p>
+                            </div>
+                        </div>
+
+                        <div style="background: var(--bg-paper); border: var(--border-strong); padding: 14px 18px; min-width: 240px;">
+                            <div style="font-size: 0.78rem; color: var(--ink-muted); font-weight: 800;">دبیر کانون:</div>
+                            <div style="font-size: 1.1rem; font-weight: 900; margin-bottom: 6px;">${club.secretary}</div>
+                            <div style="font-size: 0.78rem; color: var(--ink-soft); font-weight: 700;">📍 ${club.office}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1. Central Council Members -->
+                <div style="margin-bottom: 40px;">
+                    <h2 style="font-size: 1.45rem; font-weight: 900; margin-bottom: 16px;">اعضای شورای مرکزی ${club.name}</h2>
+                    <div class="council-grid">
+                        ${club.council.map(member => `
+                            <div class="council-card">
+                                <div class="council-avatar" style="background: ${club.color};">${member.name[0]}</div>
+                                <div>
+                                    <div style="font-weight: 900; font-size: 0.95rem;">${member.name}</div>
+                                    <div style="font-size: 0.78rem; color: var(--ink-soft); font-weight: 700;">${member.role}</div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <!-- 2. Club Specific Events -->
+                <div style="margin-bottom: 48px;">
+                    <h2 style="font-size: 1.45rem; font-weight: 900; margin-bottom: 16px;">پوسترها و برنامه‌های ${club.name}</h2>
+                    <div class="events-grid">
+                        ${clubEvents.map(ev => `
+                            <article class="event-poster-card">
+                                <div class="card-poster-frame" onclick="openEventModal('${ev.id}')">
+                                    <div class="art-poster" style="background: ${ev.posterGradient};">
+                                        ${ev.customPosterUrl ? `<img src="${ev.customPosterUrl}" class="poster-custom-img" alt="${ev.title}">` : ''}
+                                        <div class="poster-scrim-overlay">
+                                            <div class="art-poster-header">
+                                                <span class="poster-club-pill" style="background: ${club.color};">${club.name}</span>
+                                                <div class="poster-date-box">
+                                                    <div>${ev.dayName}</div>
+                                                    <div>${ev.dateText.replace(' ۱۴۰۵', '')}</div>
+                                                </div>
+                                            </div>
+                                            <div class="poster-text-glass">
+                                                <div class="art-poster-pre">${ev.subtitle}</div>
+                                                <h3 class="art-poster-title">${ev.title}</h3>
+                                            </div>
+                                            <div class="art-poster-footer">
+                                                <span>📍 ${ev.location}</span>
+                                                <span style="color: var(--ochre);">بزرگنمایی ⤢</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body-info">
+                                    <div class="card-meta-line">
+                                        <span>🕒 ${ev.timeText}</span>
+                                        <span style="color: var(--persian-teal); font-weight: 900;">ورود آزاد</span>
+                                    </div>
+                                    <button class="btn-brutal ink" style="width: 100%; justify-content: center;" onclick="openEventModal('${ev.id}')">
+                                        مشاهده جزئیات برنامه
+                                    </button>
+                                </div>
+                            </article>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <!-- 3. Club Recruitment Form -->
+                <div style="background: var(--bg-card); border: var(--border-strong); box-shadow: var(--shadow-hard); padding: 32px; margin-bottom: 60px;">
+                    <div style="max-width: 720px;">
+                        <div style="display: inline-block; background: var(--ochre); border: 1.5px solid var(--ink); padding: 3px 12px; font-size: 0.78rem; font-weight: 900; margin-bottom: 10px;">
+                            پنل جذب نیرو و عضویت فعال
+                        </div>
+                        <h2 style="font-size: 1.6rem; font-weight: 900; margin-bottom: 8px;">فرم پیوستن به تیم اجرایی ${club.name}</h2>
+                        <p style="color: var(--ink-soft); font-size: 0.92rem; margin-bottom: 24px;">
+                            علاقه‌مندان به همکاری در کارگروه‌های تخصصی ${club.name} می‌توانند مشخصات خود را ثبت کنند تا دبیر کانون (${club.secretary}) برای جلسه معارفه با آن‌ها در ارتباط باشد.
+                        </p>
+
+                        <form onsubmit="submitClubRecruitment(event, '${club.name}')" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+                            <div>
+                                <label style="display: block; font-size: 0.82rem; font-weight: 800; margin-bottom: 6px;">نام و نام خانوادگی دانشجو *</label>
+                                <input type="text" required class="search-input" placeholder="مثلاً: علی رضایی">
+                            </div>
+                            <div>
+                                <label style="display: block; font-size: 0.82rem; font-weight: 800; margin-bottom: 6px;">رشته و ورودی *</label>
+                                <input type="text" required class="search-input" placeholder="مثلاً: مهندسی مکانیک - ۱۴۰۲">
+                            </div>
+                            <div>
+                                <label style="display: block; font-size: 0.82rem; font-weight: 800; margin-bottom: 6px;">شماره تماس یا آیدی تلگرام *</label>
+                                <input type="text" required class="search-input" placeholder="0912... / @username">
+                            </div>
+                            <div>
+                                <label style="display: block; font-size: 0.82rem; font-weight: 800; margin-bottom: 6px;">کارگروه مورد علاقه در این کانون *</label>
+                                <select class="search-input" required>
+                                    ${club.teams.map(t => `<option value="${t}">${t}</option>`).join('')}
+                                </select>
+                            </div>
+                            <div style="grid-column: 1 / -1;">
+                                <label style="display: block; font-size: 0.82rem; font-weight: 800; margin-bottom: 6px;">مهارت یا تجربه قبلی (اختیاری)</label>
+                                <input type="text" class="search-input" placeholder="اگر سابقه فعالیت، نرم‌افزار خاص یا ایده‌ای دارید بنویسید...">
+                            </div>
+                            <div style="grid-column: 1 / -1; margin-top: 6px;">
+                                <button type="submit" class="btn-brutal primary" style="padding: 12px 28px; font-size: 0.95rem;">
+                                    ثبت درخواست عضویت در ${club.name} ←
+                                </button>
+                            </div>
+                        </form>
+                        <div id="recruitment-success-msg" style="display: none; margin-top: 18px; padding: 14px; background: #D1FAE5; border: 2px solid var(--ink); font-weight: 800; color: #065F46;"></div>
+                    </div>
+                </div>
+            `;
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function submitClubRecruitment(e, clubName) {
+            e.preventDefault();
+            const msgBox = document.getElementById('recruitment-success-msg');
+            msgBox.style.display = 'block';
+            msgBox.textContent = `✅ درخواست عضویت شما در «${clubName}» با موفقیت ثبت شد و به پنل دبیر کانون ارسال گردید.`;
+            e.target.reset();
+        }
+
+        function switchMainView(view) {
+            document.getElementById('club-portal-view').classList.remove('active');
+            document.getElementById('main-home-view').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function scrollToSection(id) {
+            switchMainView('home');
+            setTimeout(() => {
+                const el = document.getElementById(id);
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }, 60);
+        }
+
+        // Event Vertical Poster Lightbox Modal
+        function openEventModal(eventId) {
+            const ev = eventsData.find(e => e.id === eventId);
+            if (!ev) return;
+            const club = getClubById(ev.clubId);
+
+            const modal = document.getElementById('event-modal-backdrop');
+            const content = document.getElementById('event-modal-content');
+
+            content.innerHTML = `
+                <div style="background: #141413; padding: 24px; display: flex; align-items: center; justify-content: center; border-left: var(--border-strong);">
+                    <div style="width: 100%; max-width: 315px; aspect-ratio: 3/4; border: 2px solid #fff; overflow: hidden;">
+                        <div class="art-poster" style="background: ${ev.posterGradient};">
+                            ${ev.customPosterUrl ? `<img src="${ev.customPosterUrl}" class="poster-custom-img" alt="${ev.title}">` : ''}
+                            <div class="poster-scrim-overlay">
+                                <div class="art-poster-header">
+                                    <span class="poster-club-pill" style="background: ${club.color};">${club.name}</span>
+                                    <div class="poster-date-box">
+                                        <div>${ev.dayName}</div>
+                                        <div>${ev.dateText.replace(' ۱۴۰۵', '')}</div>
+                                    </div>
+                                </div>
+                                <div class="poster-text-glass">
+                                    <div class="art-poster-pre">${ev.subtitle}</div>
+                                    <h3 class="art-poster-title">${ev.title}</h3>
+                                </div>
+                                <div class="art-poster-footer">
+                                    <span>📍 ${ev.location}</span>
+                                    <span>SRTTU</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="padding: 32px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px;">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+                            <span style="background: ${club.color}; color: #fff; padding: 4px 12px; font-size: 0.78rem; font-weight: 800;">
+                                ${club.name}
+                            </span>
+                            <button class="btn-brutal" onclick="closeEventModal()">بستن ✕</button>
+                        </div>
+
+                        <div style="font-size: 0.85rem; font-weight: 800; color: var(--terracotta); margin-bottom: 6px;">${ev.subtitle}</div>
+                        <h2 style="font-size: 1.65rem; font-weight: 900; line-height: 1.35; margin-bottom: 16px;">${ev.title}</h2>
+
+                        <p style="font-size: 0.94rem; color: var(--ink-soft); line-height: 1.8; margin-bottom: 22px;">
+                            ${ev.details}
+                        </p>
+
+                        <div style="background: var(--bg-card); border: var(--border-strong); padding: 16px; display: grid; gap: 10px; font-size: 0.88rem; font-weight: 700;">
+                            <div>📅 <strong>زمان برگزاری:</strong> ${ev.dayName} ${ev.dateText} — ${ev.timeText}</div>
+                            <div>📍 <strong>مکان برگزاری:</strong> ${ev.location}</div>
+                            <div>✨ <strong>شرایط حضور:</strong> ورود برای تمامی دانشجویان دانشگاه تربیت دبیر شهید رجایی آزاد و رایگان است.</div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px; padding-top: 16px; border-top: var(--border-subtle);">
+                        <button class="btn-brutal ink" onclick="closeEventModal(); openClubPortal('${club.id}');">
+                            ورود به پنل ${club.name} ←
+                        </button>
+                        <label class="btn-brutal" style="cursor: pointer;" title="جایگزینی تصویر پوستر این رویداد">
+                            <span>🖼️ بارگذاری تصویر پوستر</span>
+                            <input type="file" accept="image/*" style="display: none;" onchange="uploadPosterForSpecificEvent(event, '${ev.id}')">
+                        </label>
+                    </div>
+                </div>
+            `;
+
+            modal.classList.add('open');
+        }
+
+        function closeEventModal() {
+            document.getElementById('event-modal-backdrop').classList.remove('open');
+        }
+
+        function openQuickContactModal() {
+            document.getElementById('contact-modal-backdrop').classList.add('open');
+        }
+
+        function closeQuickContactModal() {
+            document.getElementById('contact-modal-backdrop').classList.remove('open');
+        }
+
+        function handleQuickContactSubmit(e) {
+            e.preventDefault();
+            const target = document.getElementById('quick-contact-club-select').value;
+            const fb = document.getElementById('quick-contact-feedback');
+            fb.style.display = 'block';
+            fb.textContent = `✅ پیام شما با موفقیت ثبت و به «${target}» ارسال شد.`;
+            e.target.reset();
+        }
+
+        function openAll17Modal() {
+            document.getElementById('all17-modal-backdrop').classList.add('open');
+        }
+
+        function closeAll17Modal() {
+            document.getElementById('all17-modal-backdrop').classList.remove('open');
+        }
+
+        function uploadPosterForSpecificEvent(event, eventId) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const targetEv = eventsData.find(x => x.id === eventId);
+                if (targetEv) {
+                    targetEv.customPosterUrl = e.target.result;
+                    renderHeroPosterDeck();
+                    renderEventsGrid();
+                    openEventModal(eventId);
+                }
+            };
+            reader.readAsDataURL(file);
+        }
+    </script>
+</body>
+</html>
